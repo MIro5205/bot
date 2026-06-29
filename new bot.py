@@ -1,8 +1,9 @@
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes, ConversationHandler
 
-TOKEN = "8723775714:AAEgJWdeNWIbmg34oHCcdG5skZ_d7GGvt1Q"
-ADMIN_CHAT_ID = 1191164193  # Your personal Telegram ID
+import os
+TOKEN = os.environ["8723775714:AAEgJWdeNWIbmg34oHCcdG5skZ_d7GGvt1Q"]
+ADMIN_CHAT_ID = int(os.environ["1191164193"])
 
 ASK_TYPE, ASK_NAME, ASK_PHONE, DONE = range(4)
 
